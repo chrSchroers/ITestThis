@@ -1,22 +1,50 @@
+div {
+  width: 200px; }
+
 #boxtest1 {
   height: 200px;
   width: 500px;
   background: #005500; }
   #boxtest1 div {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     margin: 5px;
+    padding: 5px;
     background: #cccccc;
-    float: left; }
+    float: left;
+    border-style: solid;
+    border-left-width: 4px;
+    border-left-color: #888;
+    border-right-width: 10px;
+    border-right-color: #FFFFFF; }
     #boxtest1 div:hover {
       background: white; }
   #boxtest1 #boxtest2 {
     width: 200px;
     height: 45px;
-    border: 3px;
-    border-color: black;
-    font-size: 20px; }
+    font-size: 18px;
+    font-family: arial; }
     #boxtest1 #boxtest2 a {
       text-decoration: none; }
     #boxtest1 #boxtest2 a:hover {
       color: orange; }
+
+#contentBox {
+  width: 500px;
+  height: 200px;
+  background: #005500;
+  margin-top: 10px; }
+  #contentBox div {
+    margin-left: 5px;
+    margin-top: 5px;
+    border-style: solid;
+    border-width: 2px; }
+  #contentBox #content {
+    height: 100px;
+    width: 200px;
+    background: #cccccc; }
+  #contentBox #navbar {
+    width: 50px;
+    height: 140px;
+    background: #cccccc;
+    float: left; }

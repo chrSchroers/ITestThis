@@ -1,30 +1,52 @@
 
+$bgcolor: #005500;
+$innerDivBG: #cccccc;
 
+@mixin letItFloat() {
+	float: left;
+}
+
+div {
+	width: 200px;
+}
 
 #boxtest1 {
 	height: 200px;
 	width: 500px;
-	background: #005500;
+	background: $bgcolor;
 	
 	div {
-		height: 20px;
-		width: 20px;
+		height: 25px;
+		width: 25px;
 		margin:5px;
-		background: #cccccc;
+		padding: 5px;
+		background: $innerDivBG;
 		float: left;
+		
 		&:hover {
-			background: lighten(#cccccc, 50%);
+			background: lighten($innerDivBG, 50%);
+		}
+			
+		border: {
+			style: solid;
+			left: {
+				width: 4px;
+				color: #888;
+			}
+			right: {
+				width : 10px;
+				color: #FFFFFF;
+			}
 		}
 	}
 	
 	#boxtest2 {
 		width: 200px;
 		height: 45px;
-		border: 3px;
-		border-color: black;
-		
-		font-size: 20px;
-		
+		font: {
+			size: 18px;
+			family: arial;
+		}
 		a {
 			text-decoration: none;
 			
@@ -33,5 +55,29 @@
 			color: orange;
 		}
 	}
+}
 
+#contentBox {
+	width: 500px;
+	height: 200px;
+	background: $bgcolor;
+	margin-top: 10px;
+	
+	div {
+		margin: {
+			left: 5px;
+			top: 5px;
+		}
+		border-style: solid;
+		border-width: 2px;
+	}
+	
+	#content {
+		height: 100px;
+		width: 200px;
+		background: $innerDivBG;
+	}
+	
+	@import "navbar";
+	
 }

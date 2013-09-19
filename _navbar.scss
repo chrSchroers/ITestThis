@@ -1,0 +1,7 @@
+
+#navbar {
+	width: 50px;
+	height: 140px;
+	background: $innerDivBG;
+	@include letItFloat;
+}
